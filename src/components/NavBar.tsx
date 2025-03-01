@@ -31,7 +31,7 @@ className="hover:text-blue-500 dark:hover:text-blue-300"
               Contact Us
             </a>
         </div>
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           {mounted && (
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
@@ -43,7 +43,7 @@ className="hover:text-blue-500 dark:hover:text-blue-300"
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
+        </div> */}
       </div>
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 shadow-md py-4">
