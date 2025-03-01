@@ -59,7 +59,7 @@ export default function ProjectShowcase() {
             whileHover={{ scale: 1.05, boxShadow: '0px 10px 30px rgba(0,0,0,0.2)' }}
             transition={{ type: 'spring', stiffness: 200, damping: 10 }}
           >
-            <Link href='/'>
+            {/* <Link href='/'> */}
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer">
                 <Image 
                   src={project.image} 
@@ -80,7 +80,7 @@ export default function ProjectShowcase() {
                   </motion.span>
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
           </motion.div>
         ))}
       </motion.div>
