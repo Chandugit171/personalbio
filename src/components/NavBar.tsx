@@ -15,25 +15,7 @@ export default function NavBar() {
   useEffect(() => {
     setMounted(true);
   }, []);
-   // Function to smoothly scroll to Contact Us section
-   const handleScrollToContact = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (window.location.pathname === '/') {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      await router.push('/'); // Navigate to home page
-      setTimeout(() => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 500); // Delay to ensure navigation completes
-    }
-    setIsOpen(false);
-  };
+
 
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 w-full z-50">
@@ -42,10 +24,16 @@ export default function NavBar() {
           <span className="text-xl font-bold cursor-pointer dark:text-white">mr.chandudev</span>
         </Link>
         <div className="hidden md:flex space-x-6">
-          <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-300">About</Link>
-          <Link href="/blogs" className="hover:text-blue-500 dark:hover:text-blue-300">Blogs</Link>
-          <Link href="/projects" className="hover:text-blue-500 dark:hover:text-blue-300">Projects</Link>
-          <Link href="/contactus" className="hover:text-blue-500 dark:hover:text-blue-300">Contact Us</Link>
+          <a href="#about" className="hover:text-blue-500 dark:hover:text-blue-300">About</a>
+          <a href="#blog" className="hover:text-blue-500 dark:hover:text-blue-300">Blogs</a>
+          <a href="#projects" className="hover:text-blue-500 dark:hover:text-blue-300">Projects</a>
+          <a 
+              href="#contact"
+className="hover:text-blue-500 dark:hover:text-blue-300"
+             
+            >
+              Contact Us
+            </a>
         </div>
         <div className="flex items-center space-x-4">
           {mounted && (
@@ -64,13 +52,12 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 shadow-md py-4">
           <div className="flex flex-col space-y-4 items-center">
-            <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/blogs" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>Blogs</Link>
-            <Link href="/projects" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>Projects</Link>
-            <a 
+            <a href="#about" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>About</a>
+            <a href="#blog" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>Blogs</a>
+            <a href="#projects" className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}>Projects</a>
+            <a
             href="#contact"
-            className="text-red-500 font-semibold hover:text-red-700 transition-colors"
-            onClick={handleScrollToContact}
+            className="hover:text-blue-500 dark:hover:text-blue-300" onClick={() => setIsOpen(false)}
           >
             Contact Us
           </a>

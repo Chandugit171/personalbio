@@ -12,7 +12,6 @@ export default function Footer() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        {/* Logo & Name */}
         <motion.div 
           className="text-xl font-bold tracking-wide"
           whileHover={{ scale: 1.05 }}
@@ -20,27 +19,25 @@ export default function Footer() {
           Chandra Obulesu Muchhumarri.dev
         </motion.div>
 
-        {/* Navigation Links */}
         <nav className="mt-4 md:mt-0">
           <ul className="flex space-x-6 text-sm">
             <motion.li whileHover={{ scale: 1.1 }}>
-              <a href="#home" className="hover:text-blue-400 transition">Home</a>
+              <a href="#about" className="hover:text-blue-400 transition">About</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <a href="#about" className="hover:text-blue-400 transition">About</a>
+              <a href="#blog" className="hover:text-blue-400 transition">Blogs</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+              <a href="#contact" className="hover:text-blue-400 transition">Contact Us</a>
             </motion.li>
           </ul>
         </nav>
 
-        {/* Social Media Icons */}
         <div className="mt-4 md:mt-0 flex space-x-4">
-          <motion.a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+          <motion.a href="https://www.linkedin.com/in/chandra-obulesu-muchummari-822609255/" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.2 }} className="text-blue-500">
             <FaLinkedin className="text-2xl" />
           </motion.a>
@@ -48,7 +45,7 @@ export default function Footer() {
             whileHover={{ scale: 1.2 }} className="text-blue-400">
             <FaTwitter className="text-2xl" />
           </motion.a>
-          <motion.a href="https://github.com" target="_blank" rel="noopener noreferrer"
+          <motion.a href="https://github.com/Chandugit171" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.2 }} className="text-white">
             <FaGithub className="text-2xl" />
           </motion.a>

@@ -30,7 +30,7 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-100 dark:bg-gray-900">
+    <section id ="blog" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-100 dark:bg-gray-900">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-10">
         Latest Blogs
       </h2>
@@ -47,7 +47,7 @@ export default function BlogSection() {
             whileHover={{ scale: 1.05, boxShadow: '0px 10px 30px rgba(0,0,0,0.2)' }}
             transition={{ type: 'spring', stiffness: 200, damping: 10 }}
           >
-            <Link href={blog.link} passHref>
+            <Link href="/" passHref>
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer">
                 <Image 
                   src={blog.image} 
@@ -75,3 +75,4 @@ export default function BlogSection() {
     </section>
   );
 }
+
