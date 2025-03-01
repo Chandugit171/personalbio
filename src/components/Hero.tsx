@@ -1,10 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
 
 export default function AboutSection() {
-  const { theme } = useTheme();
 
   return (
     <section id ="about" className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-12 lg:px-24 dark:bg-gray-900 ">

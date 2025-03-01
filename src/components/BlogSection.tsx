@@ -41,7 +41,7 @@ export default function BlogSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        {blogs.map((blog, index) => (
+        {blogs.map((blog) => (
           <motion.div
             key={blog.id}
             whileHover={{ scale: 1.05, boxShadow: '0px 10px 30px rgba(0,0,0,0.2)' }}

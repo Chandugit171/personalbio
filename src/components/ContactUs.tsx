@@ -6,7 +6,6 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub } 
 import { useRef } from 'react';
 
 export default function ContactUs() {
-    const contactRef = useRef(null);
 
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
 
