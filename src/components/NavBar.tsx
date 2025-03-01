@@ -3,11 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from 'next-themes';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

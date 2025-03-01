@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-import { useRef } from 'react';
 
 export default function ContactUs() {
 
@@ -15,7 +14,7 @@ export default function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Message Sent!'); // Replace with actual API call
+    alert('Message Sent!'); 
   };
 
   return (
