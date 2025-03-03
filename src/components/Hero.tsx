@@ -3,9 +3,17 @@
 import Image from 'next/image';
 
 export default function AboutSection() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; 
+    link.download = 'chandraobulesu.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-    <section id ="about" className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-12 lg:px-24 dark:bg-gray-900 ">
+    <section id="about" className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-12 lg:px-24 dark:bg-gray-900">
       <div className="md:w-1/2 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
         <p className="text-gray-700 dark:text-gray-300 text-lg mb-6">
@@ -19,20 +27,25 @@ export default function AboutSection() {
           <li><strong>API Integration:</strong> REST & GraphQL</li>
           <li><strong>UI/UX:</strong> Responsive Design, Material UI, Tailwind CSS</li>
         </ul>
-        <p className="text-gray-700 dark:text-gray-300 text-lg">
+        <p className="text-gray-700 dark:text-gray-300 text-lg mb-6">
           I enjoy solving complex problems, optimizing performance, and ensuring applications are both functional and visually appealing.
         </p>
+        <button 
+          onClick={handleDownload} 
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        >
+          Download Resume
+        </button>
       </div>
 
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-      <Image 
-  src="/perfect.jpg" 
-  alt="Profile" 
-  width={900} 
-  height={400} 
-  className="rounded-lg shadow-lg"
-/>
-
+        <Image 
+          src="/perfect.jpg" 
+          alt="Profile" 
+          width={900} 
+          height={400} 
+          className="rounded-lg shadow-lg"
+        />
       </div>
     </section>
   );
